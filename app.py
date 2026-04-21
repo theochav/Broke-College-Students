@@ -6,10 +6,10 @@ def generateRecipe(ingredients, mealType):
             "Step 1: Gather your ingredients.\n"
             "Step 2: cook the ingredients based on the recipe.\n"
             "Step 3: Enjoy" 
-        )
+        ) 
     elif mealType == "lunch": 
         return (
-            "Recipe Idea: " + mealType.title() "\n
+            "Recipe Idea: " + mealType.title() + "\n"
             "Use these ingredients: " + ingredients + "\n"
             "Step 1: gather ingredients. \n"
             "Step 2: Cook the ingredients based on the recipe. \n"
@@ -17,19 +17,27 @@ def generateRecipe(ingredients, mealType):
 
         )
     elif mealType == "dinner":
-        return  ("Recipe Idea: " + mealType.title() "\n
+        return  ("Recipe Idea: " + mealType.title() + "\n"
         "Use these ingredients: " + ingredients + "\n" 
         "Step 1: gather ingredients. \n"
         "Step 2: Cook ingredients based on the recipe. \n" 
         "Step 3: Enjoy. \n"
     )
+    elif mealType == "snack": 
+        return ("Recipe Idea: " + mealType.title() + "\n"
+        "Use these ingredients:" + ingredients + "\n"
+        "Step 1: gather ingredients. \n"
+        "Step 2: Cook ingredients based on the recipe. \n"
+        "Step 3: Enjoy. \n"
+        ) 
     else:
-        return "Please renter your statment"
+        return "Please re-enter your statment"
 
 
 ingredients = input("Enter the ingredients you have: ")
-mealType = input("Do you want breakfast, lunch, or dinner? ")
+mealType = input("Do you want breakfast, lunch, dinner, or snack? ")
 mealType = mealType.lower()
 
 recipe = generateRecipe(ingredients, mealType)
 print(recipe)
+    
