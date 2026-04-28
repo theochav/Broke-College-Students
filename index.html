@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Broke College Students</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
+  <div class="card">
     <!-- Main Title -->
     <h1>Cooking AI</h1>
 
     <!-- Description -->
-    <p>Enter your ingredients and get a recipe here</p>
+    <p class="subtitle">Enter ingredients and pick a meal type to get a simple recipe idea.</p>
 
-    <!-- Input Box -->
-     <input type="text" placeholder="Enter ingredients">
+    <label for="ingredientsInput">Ingredients</label>
+    <input id="ingredientsInput" type="text" placeholder="Example: eggs, bread, cheese">
 
-     <br><br>
+    <label for="mealTypeSelect">Meal Type</label>
 
-     <!-- Dropdown -->
-      <select>
-        <option>Breakfast</option>
-        <option>Lunch</option>
-        <option>Dinner</option>
-        <option>Snack</option>
-      </select>
+    <select id="mealTypeSelect">
+      <option value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+      <option value="snack">Snack</option>
+    </select>
        
-      <br><br> 
+    
 
-      <button>Generate recipe</button>
+    <button id="generateButton" type="button">Generate Recipe Idea</button> 
+    <h2>Your Recipe</h2>
+    <pre id="recipeOutput" class="recipe-box">Your recipe will be shown here after you click the button</pre>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

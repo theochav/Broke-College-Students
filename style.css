@@ -1,9 +1,68 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(139, 139, 202);
-    text-align: center;
+    background-color: #d9e8ff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1{
-    color: darkcyan;
+    margin-top: 0;
+    color: #0f4c81;
+}
+
+.subtitle{
+    color: #444444;
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b5b5b5;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1f7ae0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0f63c3;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #0f4c81;
+}
+
+.recipe-box {
+    background-color: #f7fbff;
+    border: 1px solid #c6dcf8;
+    border-radius: 8px;
+    padding: 12px; 
+    min-height: 130px;
+    text-align: left;
+    white-space: pre-wrap;
 }
