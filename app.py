@@ -1,37 +1,38 @@
 def generateRecipe(ingredients, mealType):
-    if mealType == "breakfast": 
+    if mealType == "breakfast":
         return (
             "Recipe Idea: " + mealType.title() + "\n"
             "Use these ingredients: " + ingredients + "\n"
             "Step 1: Gather your ingredients.\n"
-            "Step 2: cook the ingredients based on the recipe.\n"
-            "Step 3: Enjoy" 
-        ) 
-    elif mealType == "lunch": 
+            "Step 2: Cook the ingredients based on the recipe.\n"
+            "Step 3: Enjoy."
+        )
+    elif mealType == "lunch":
         return (
             "Recipe Idea: " + mealType.title() + "\n"
             "Use these ingredients: " + ingredients + "\n"
-            "Step 1: gather ingredients. \n"
-            "Step 2: Cook the ingredients based on the recipe. \n"
-            "Step 3: Enjoy"
+            "Step 1: Gather your ingredients.\n"
+            "Step 2: Cook the ingredients based on the recipe.\n"
+            "Step 3: Enjoy."
 
         )
     elif mealType == "dinner":
-        return  ("Recipe Idea: " + mealType.title() + "\n"
-        "Use these ingredients: " + ingredients + "\n" 
-        "Step 1: gather ingredients. \n"
-        "Step 2: Cook ingredients based on the recipe. \n" 
-        "Step 3: Enjoy. \n"
-    )
-    elif mealType == "snack": 
+        return (
+            "Recipe Idea: " + mealType.title() + "\n"
+            "Use these ingredients: " + ingredients + "\n"
+            "Step 1: Gather your ingredients.\n"
+            "Step 2: Cook ingredients based on the recipe.\n"
+            "Step 3: Enjoy."
+        )
+    elif mealType == "snack":
         return ("Recipe Idea: " + mealType.title() + "\n"
-        "Use these ingredients:" + ingredients + "\n"
-        "Step 1: gather ingredients. \n"
-        "Step 2: Cook ingredients based on the recipe. \n"
-        "Step 3: Enjoy. \n"
-        ) 
+        "Use these ingredients: " + ingredients + "\n"
+        "Step 1: Gather your ingredients.\n"
+        "Step 2: Cook ingredients based on the recipe.\n"
+        "Step 3: Enjoy."
+        )
     else:
-        return "Please re-enter your statment"
+        return "Please re-enter your statement."
 
 
 ingredients = input("Enter the ingredients you have: ")
@@ -40,4 +41,3 @@ mealType = mealType.lower()
 
 recipe = generateRecipe(ingredients, mealType)
 print(recipe)
-    
