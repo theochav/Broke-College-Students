@@ -1,68 +1,137 @@
+/* Styles the whole page background and centers the card */
 body{
+    /* Sets the default font for the whole page */
     font-family: Arial, Helvetica, sans-serif;
+    /* Light blue background color */
     background-color: #d9e8ff;
+    /* Removes the browser's default outer spacing */
     margin: 0;
+    /* Makes body at least as tall as the full screen */
     min-height: 100vh;
+    /* Enables flexbox layout */
     display: flex;
+    /* Centers content left-to-right */
     justify-content: center;
+    /* Centers content top-to-bottom */
     align-items: center;
 }
 
-h1{
-    margin-top: 0;
-    color: #0f4c81;
-}
-
-.subtitle{
-    color: #444444;
-    margin-bottom: 18px;
-}
-
-label {
-    display: block;
-    text-align: left;
-    margin-top: 12px;
-    margin-bottom: 6px;
-    font-weight: bold;
-}
-
-input, select {
+/* Styles the white container card */
+.card {
+    /* Lets the card fill available width on small screens */
     width: 100%;
-    padding: 10px;
-    border: 1px solid #b5b5b5;
-    border-radius: 8px;
-    font-size: 16px;
+    /* Prevents card from becoming too wide on large screens */
+    max-width: 420px;
+    /* White background for contrast */
+    background-color: #ffffff;
+    /* Rounds card corners */
+    border-radius: 12px;
+    /* Adds space inside the card */
+    padding: 20px;
+    /* Adds soft shadow behind the card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    /* Includes padding in the element's final width */
     box-sizing: border-box;
 }
 
-button {
-    margin-top: 16px;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #1f7ae0;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0f63c3;
-}
-
-h2 {
-    margin-top: 20px;
-    margin-bottom: 8px;
+/* Styles the main page heading */
+h1{
+    /* Removes extra space above heading */
+    margin-top: 0;
+    /* Dark blue heading color */
     color: #0f4c81;
 }
 
-.recipe-box {
-    background-color: #f7fbff;
-    border: 1px solid #c6dcf8;
-    border-radius: 8px;
-    padding: 12px; 
-    min-height: 130px;
+/* Styles the descriptive sentence below the heading */
+.subtitle{
+    /* Medium gray text color */
+    color: #444444;
+    /* Adds space below subtitle */
+    margin-bottom: 18px;
+}
+
+/* Styles all form labels */
+label {
+    /* Makes labels take full row */
+    display: block;
+    /* Aligns label text to the left */
     text-align: left;
+    /* Adds spacing above each label */
+    margin-top: 12px;
+    /* Adds spacing below each label */
+    margin-bottom: 6px;
+    /* Makes label text bold */
+    font-weight: bold;
+}
+
+/* Shared styles for text input and dropdown */
+input, select {
+    /* Makes fields span the card width */
+    width: 100%;
+    /* Adds inner spacing in the fields */
+    padding: 10px;
+    /* Light gray border around fields */
+    border: 1px solid #b5b5b5;
+    /* Rounds field corners */
+    border-radius: 8px;
+    /* Makes field text readable */
+    font-size: 16px;
+    /* Keeps width calculations consistent */
+    box-sizing: border-box;
+}
+
+/* Styles the generate button */
+button {
+    /* Adds space above button */
+    margin-top: 16px;
+    /* Makes button full width */
+    width: 100%;
+    /* Adds inner spacing for better click area */
+    padding: 12px;
+    /* Removes default border */
+    border: none;
+    /* Rounds button corners */
+    border-radius: 8px;
+    /* Bright blue button background */
+    background-color: #1f7ae0;
+    /* White text for contrast */
+    color: white;
+    /* Readable button text size */
+    font-size: 16px;
+    /* Shows pointer cursor on hover */
+    cursor: pointer;
+}
+
+/* Changes button color when mouse hovers */
+button:hover {
+    /* Slightly darker blue on hover */
+    background-color: #0f63c3;
+}
+
+/* Styles the "Your Recipe" subheading */
+h2 {
+    /* Adds space above subheading */
+    margin-top: 20px;
+    /* Adds small space below subheading */
+    margin-bottom: 8px;
+    /* Matches heading color theme */
+    color: #0f4c81;
+}
+
+/* Styles the recipe output box */
+.recipe-box {
+    /* Very light blue background for output area */
+    background-color: #f7fbff;
+    /* Thin blue border around output box */
+    border: 1px solid #c6dcf8;
+    /* Rounded corners for output box */
+    border-radius: 8px;
+    /* Inner spacing for recipe text */
+    padding: 12px; 
+    /* Keeps output area visible even before content appears */
+    min-height: 130px;
+    /* Aligns output text to the left */
+    text-align: left;
+    /* Preserves line breaks and wraps long lines */
     white-space: pre-wrap;
 }

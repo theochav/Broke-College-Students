@@ -2,26 +2,35 @@
 <html lang="en">
 
 <head>
+    <!-- Sets character encoding so text renders correctly -->
     <meta charset="UTF-8">
+    <!-- Text shown on the browser tab -->
     <title>Broke College Students</title>
+    <!-- Connects this HTML file to the CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
+  <!-- Main card container that wraps all app content -->
   <div class="card">
-    <!-- Main Title -->
+    <!-- Main app heading -->
     <h1>Cooking AI</h1>
 
-    <!-- Description -->
+    <!-- Short instruction text for the user -->
     <p class="subtitle">Enter ingredients and pick a meal type to get a simple recipe idea.</p>
 
+    <!-- Label connected to the ingredients input by matching the id -->
     <label for="ingredientsInput">Ingredients</label>
+    <!-- Text box where user types ingredients -->
     <input id="ingredientsInput" type="text" placeholder="Example: eggs, bread, cheese">
 
+    <!-- Label connected to the meal type dropdown -->
     <label for="mealTypeSelect">Meal Type</label>
 
+    <!-- Dropdown menu for selecting one meal type -->
     <select id="mealTypeSelect">
+      <!-- Option values are read by JavaScript -->
       <option value="breakfast">Breakfast</option>
       <option value="lunch">Lunch</option>
       <option value="dinner">Dinner</option>
@@ -29,11 +38,14 @@
     </select>
        
     
-
+    <!-- Button that starts recipe generation in JavaScript -->
     <button id="generateButton" type="button">Generate Recipe Idea</button> 
+    <!-- Small heading for the output section -->
     <h2>Your Recipe</h2>
+    <!-- Preformatted text box where the recipe result is displayed -->
     <pre id="recipeOutput" class="recipe-box">Your recipe will be shown here after you click the button</pre>
-    </div>
+    </div> <!-- End of card container -->
+    <!-- Loads JavaScript after the HTML so elements exist first -->
     <script src="script.js"></script>
 </body>
 
