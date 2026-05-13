@@ -14,6 +14,7 @@
 <body>
   <!-- Main card container that wraps all app content -->
   <div class="card">
+    <a href="home.html">Go to Home Page</a>
     <!-- Main app heading -->
     <h1>Cooking AI</h1>
 
@@ -24,7 +25,8 @@
     <label for="ingredientsInput">Ingredients</label>
     <!-- Text box where user types ingredients -->
     <input id="ingredientsInput" type="text" placeholder="Example: eggs, bread, cheese">
-
+    <label for="peopleInput">Number Of People</label>
+    <input id="peopleInput" type="number" placeholder="Example: 4">
     <!-- Label connected to the meal type dropdown -->
     <label for="mealTypeSelect">Meal Type</label>
 
@@ -40,8 +42,7 @@
     
     <!-- Button that starts recipe generation in JavaScript -->
     <button id="generateButton" type="button">Generate Recipe Idea</button> 
-    <!-- Small heading for the output section -->
-    <h2>Your Recipe</h2>
+    <button id="clearButton" type="button">Clear</button>
     <!-- Preformatted text box where the recipe result is displayed -->
     <pre id="recipeOutput" class="recipe-box">Your recipe will be shown here after you click the button</pre>
     </div> <!-- End of card container -->
