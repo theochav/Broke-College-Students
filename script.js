@@ -48,10 +48,35 @@ const recipeOutput = document.getElementById("recipeOutput");
 const peopleInput = document.getElementById("peopleInput");
 const clearButton = document.getElementById("clearButton");
 
+// Stop the user from typing e, minus, or plus in the people box
+peopleInput.addEventListener("keydown", function (event) {
+    if (event.key === "e" || event.key === "E" || event.key === "-" || event.key === "+") {
+        event.preventDefault(); // cancel the key so nothing gets added
+    }
+});
+
+// Clear bad values or cap at 10 if user types/pastes too high
+peopleInput.addEventListener("input", function () {
+    if (peopleInput.value !== "" && Number(peopleInput.value) < 1) {
+        peopleInput.value = ""; // remove 0 or negative numbers
+    }
+    if (peopleInput.value !== "" && Number(peopleInput.value) > 10) {
+        peopleInput.value = "10"; // set back to 10 if over the max
+    }
+});
+
 generateButton.addEventListener("click", function () {
     const ingredients = ingredientsInput.value; 
     const mealType = mealTypeSelect.value.toLowerCase();
-    const people= peopleInput.value;
+    const people = Number(peopleInput.value); // turn the text into a number
+    if (peopleInput.value === "" || people < 1) { // check for empty, 0, or negative
+        recipeOutput.textContent = "Please enter at least 1 person."; // show error message
+        return; // stop here so no recipe is made
+    }
+    if (people > 10) { // check if number is above the max
+        recipeOutput.textContent = "Please enter 10 people or fewer."; // show error message
+        return; // stop here so no recipe is made
+    }
     const recipe = generateRecipe(ingredients, mealType, people);
     recipeOutput.textContent = recipe;
 }); 
