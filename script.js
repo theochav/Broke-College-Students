@@ -1,9 +1,20 @@
-function generateRecipe(ingredients, mealType, people){
+function generateRecipe(ingredients, mealType, people, cuisines, dietaryRestrictions){
     if (ingredients === "") return "Please input your ingredients.";
+
+    // Build extra lines only if the user typed something (both are optional)
+    let extraInfo = "";
+    if (cuisines !== "") {
+        extraInfo += "Favorite cuisines: " + cuisines + "\n";
+    }
+    if (dietaryRestrictions !== "") {
+        extraInfo += "Dietary restrictions: " + dietaryRestrictions + "\n";
+    }
+
     if (mealType === "breakfast"){
         return (  
             "Recipe Idea: " + mealType + "\n" +
             "Recipe for " + people + " people\n" +
+            extraInfo +
             "Use these ingredients: " + ingredients + "\n" +
             "Step 1: Gather your ingredients.\n" +
             "Step 2: Cook the ingredients based on the recipe.\n" +
@@ -13,6 +24,7 @@ function generateRecipe(ingredients, mealType, people){
         return (
             "Recipe Idea: " + mealType + "\n" +
             "Recipe for " + people + " people\n" +
+            extraInfo +
             "Use these ingredients: " + ingredients + "\n" +
             "Step 1: Gather your ingredients.\n" +
             "Step 2: Cook the ingredients based on the recipe.\n" +
@@ -23,6 +35,7 @@ function generateRecipe(ingredients, mealType, people){
         return (
             "Recipe Idea: " + mealType + "\n" +
             "Recipe for " + people + " people\n" +
+            extraInfo +
             "Use these ingredients: " + ingredients + "\n" +
             "Step 1: Gather your ingredients.\n" +
             "Step 2: Cook ingredients based on the recipe.\n" +
@@ -31,6 +44,7 @@ function generateRecipe(ingredients, mealType, people){
     } else if (mealType === "snack"){
         return ("Recipe Idea: " + mealType + "\n" +
         "Recipe for " + people + " people\n" +
+        extraInfo +
         "Use these ingredients: " + ingredients + "\n" +
         "Step 1: Gather your ingredients.\n" +
         "Step 2: Cook ingredients based on the recipe.\n" +
@@ -46,6 +60,8 @@ const mealTypeSelect = document.getElementById("mealTypeSelect");
 const generateButton = document.getElementById("generateButton");
 const recipeOutput = document.getElementById("recipeOutput");
 const peopleInput = document.getElementById("peopleInput");
+const cuisineInput = document.getElementById("cuisineInput");
+const dietaryInput = document.getElementById("dietaryInput");
 const clearButton = document.getElementById("clearButton");
 
 // Stop the user from typing e, minus, or plus in the people box
@@ -77,12 +93,16 @@ generateButton.addEventListener("click", function () {
         recipeOutput.textContent = "Please enter 10 people or fewer."; // show error message
         return; // stop here so no recipe is made
     }
-    const recipe = generateRecipe(ingredients, mealType, people);
+    const cuisines = cuisineInput.value;
+    const dietaryRestrictions = dietaryInput.value;
+    const recipe = generateRecipe(ingredients, mealType, people, cuisines, dietaryRestrictions);
     recipeOutput.textContent = recipe;
 }); 
 
 clearButton.addEventListener("click", function () {
     ingredientsInput.value = "";
+    cuisineInput.value = "";
+    dietaryInput.value = "";
     peopleInput.value = "";
     recipeOutput.textContent = "";  
 })
