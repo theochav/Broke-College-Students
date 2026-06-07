@@ -1,19 +1,20 @@
 /* Styles the whole page background and centers the card */
-body{
-    /* Sets the default font for the whole page */
+body {
     font-family: Arial, Helvetica, sans-serif;
-    /* Light blue background color */
     background-color: #d9e8ff;
-    /* Removes the browser's default outer spacing */
     margin: 0;
-    /* Makes body at least as tall as the full screen */
     min-height: 100vh;
-    /* Enables flexbox layout */
     display: flex;
-    /* Centers content left-to-right */
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.page-content {
+    display: flex;
     justify-content: center;
-    /* Centers content top-to-bottom */
-    align-items: center;
+    align-items: flex-start;
+    padding: 20px;
+    flex: 1;
 }
 
 /* Styles the white container card */
@@ -135,3 +136,36 @@ h2 {
     /* Preserves line breaks and wraps long lines */
     white-space: pre-wrap;
 }
+    
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 14px 20px;
+    border-bottom: 1px solid #c6dcf8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.site-name {
+    font-weight: bold;
+    color: #0f4c81;
+}
+.home-nav a {
+    color: #1f7ae0;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.home-nav a:hover {
+    color: #0f63c3;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
