@@ -23,6 +23,7 @@ body {
     width: 100%;
     /* Prevents card from becoming too wide on large screens */
     max-width: 420px;
+    margin: 20px auto;
     /* White background for contrast */
     background-color: #ffffff;
     /* Rounds card corners */
