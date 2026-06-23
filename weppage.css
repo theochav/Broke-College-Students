@@ -20,3 +20,46 @@ body {
     font-weight: bold;
     color: #0f4c81;
 }
+
+.button {
+    /* Adds space above button */
+    margin-top: 16px;
+    /* Makes button full width */
+    width: 100%;
+    /* Adds inner spacing for better click area */
+    padding: 12px;
+    /* Removes default border */
+    border: none;
+    /* Rounds button corners */
+    border-radius: 8px;
+    /* Bright blue button background */
+    background-color: #1f7ae0;
+    /* White text for contrast */
+    color: white;
+    /* Readable button text size */
+    font-size: 16px;
+    /* Shows pointer cursor on hover */
+    cursor: pointer;
+}
+
+button:hover {
+    /* Slightly darker blue on hover */
+    background-color: #0f63c3;
+}
+
+.recipe-box {
+    /* Very light blue background for output area */
+    background-color: #f7fbff;
+    /* Thin blue border around output box */
+    border: 1px solid #c6dcf8;
+    /* Rounded corners for output box */
+    border-radius: 8px;
+    /* Inner spacing for recipe text */
+    padding: 12px; 
+    /* Keeps output area visible even before content appears */
+    min-height: 130px;
+    /* Aligns output text to the left */
+    text-align: left;
+    /* Preserves line breaks and wraps long lines */
+    white-space: pre-wrap;
+}

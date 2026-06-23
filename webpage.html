@@ -12,15 +12,20 @@
     <!-- Top navigation bar -->
     <nav class="home-nav">
         <span class="site-name">Broke College Students</span>
+        <div class ="nav-links">
         <a href="index.html">Recipe Generator</a>
-    </nav> 
-    <nav class="home-nav">
-        <span class="site-name">Broke College Students</span>
-        <a href="webpage.html">Homepage</a>
+        <a href="home.html">Home</a>
+    </div>
     </nav> 
      <!-- Main page content (no card box) -->
      <main class="home-main">
         <header> 
-        <h1> Webpage </h1>
-        <br>
-        <p> Hello and welcome to my homepage where you can go to different parts on this website. </p>
+        <h1>Generated Recipe</h1>
+        <p>Your recipe will be shown below.</p>
+        <pre id="recipeOutput" class="recipe-box">No recipe has been generated yet.</pre>
+        </header>
+    </main>
+    <button id="clearRecipeButton" type="button">Clear</button>
+    <script src="webpage.js"></script>
+</body>
+</html>

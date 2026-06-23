@@ -58,7 +58,6 @@ function generateRecipe(ingredients, mealType, people, cuisines, dietaryRestrict
 const ingredientsInput = document.getElementById("ingredientsInput");
 const mealTypeSelect = document.getElementById("mealTypeSelect");
 const generateButton = document.getElementById("generateButton");
-const recipeOutput = document.getElementById("recipeOutput");
 const peopleInput = document.getElementById("peopleInput");
 const cuisineInput = document.getElementById("cuisineInput");
 const dietaryInput = document.getElementById("dietaryInput");
@@ -86,17 +85,18 @@ generateButton.addEventListener("click", function () {
     const mealType = mealTypeSelect.value.toLowerCase();
     const people = Number(peopleInput.value); // turn the text into a number
     if (peopleInput.value === "" || people < 1) { // check for empty, 0, or negative
-        recipeOutput.textContent = "Please enter at least 1 person."; // show error message
+        alert("Please enter at least 1 person.")
         return; // stop here so no recipe is made
     }
     if (people > 10) { // check if number is above the max
-        recipeOutput.textContent = "Please enter 10 people or fewer."; // show error message
+        alert("Please enter 10 people or fewer")
         return; // stop here so no recipe is made
     }
     const cuisines = cuisineInput.value;
     const dietaryRestrictions = dietaryInput.value;
     const recipe = generateRecipe(ingredients, mealType, people, cuisines, dietaryRestrictions);
-    recipeOutput.textContent = recipe;
+    localStorage.setItem("generatedRecipe", recipe)
+    window.location.href = "webpage.html"
 }); 
 
 clearButton.addEventListener("click", function () {
@@ -104,5 +104,4 @@ clearButton.addEventListener("click", function () {
     cuisineInput.value = "";
     dietaryInput.value = "";
     peopleInput.value = "";
-    recipeOutput.textContent = "";  
 })

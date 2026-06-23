@@ -16,8 +16,12 @@
 <!-- Main card container that wraps all app content -->
 <nav class="home-nav">
   <span class="site-name">Broke College Students</span>
-  <a href="home.html">Go to Home Page </a>
+  <div class ="nav-links">
+    <a href="home.html">Home</a>
+    <a href="webpage.html">Webpage</a>
+  </div> 
 </nav>
+
   <div class="card">
     <!-- Main app heading -->
     <h1>Cooking AI</h1>
@@ -54,8 +58,6 @@
     <!-- Button that starts recipe generation in JavaScript -->
     <button id="generateButton" type="button">Generate Recipe Idea</button> 
     <button id="clearButton" type="button">Clear</button>
-    <!-- Preformatted text box where the recipe result is displayed -->
-    <pre id="recipeOutput" class="recipe-box">Your recipe will be shown here after you click the button</pre>
     </div> <!-- End of card container -->
     <!-- Loads JavaScript after the HTML so elements exist first -->
     <script src="script.js"></script>
